@@ -18,8 +18,9 @@ refs.stopBtn.addEventListener('click', stopColorChange)
 function startColorChange(event) {
    // console.log(event);
     event.preventDefault();
-    event.currentTarget = bodyColorChange();
-    interval = setInterval(() => { bodyColorChange()}, 1000);
+    interval= setInterval(() =>{refs.body.style.background = getRandomHexColor()},1000)
+    // event.target = bodyColorChange();
+    // interval = setInterval(() => { bodyColorChange()}, 1000);
     refs.startBtn.disabled = true;
     refs.stopBtn.disabled = false;
 }
